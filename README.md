@@ -1,1 +1,1 @@
-#S3-Static Web Hosting using Terraform 
+S3-Static Web Hosting using Terraform 
