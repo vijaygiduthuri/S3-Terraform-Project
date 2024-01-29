@@ -38,12 +38,52 @@ resource "aws_s3_object" "index" {
   content_type = "text/html"
 }
 
-resource "aws_s3_object" "error" {
+resource "aws_s3_object" "cart" {
   bucket = aws_s3_bucket.mybucket.id
-  key = "error.html"
-  source = "error.html"
+  key = "cart.html"
+  source = "cart.html"
   acl = "public-read"
   content_type = "text/html"
+}
+
+resource "aws_s3_object" "cartjs" {
+  bucket = aws_s3_bucket.mybucket.id
+  key = "cart.js"
+  source = "cart.js"
+  acl = "public-read"
+  content_type = "text/js"
+}
+
+resource "aws_s3_object" "firebase" {
+  bucket = aws_s3_bucket.mybucket.id
+  key = "firebase.js"
+  source = "firebase.js"
+  acl = "public-read"
+  content_type = "text/js"
+}
+
+resource "aws_s3_object" "header" {
+  bucket = aws_s3_bucket.mybucket.id
+  key = "header.js"
+  source = "header.js"
+  acl = "public-read"
+  content_type = "text/js"
+}
+
+resource "aws_s3_object" "script" {
+  bucket = aws_s3_bucket.mybucket.id
+  key = "script.js"
+  source = "script.js"
+  acl = "public-read"
+  content_type = "text/js"
+}
+
+resource "aws_s3_object" "style" {
+  bucket = aws_s3_bucket.mybucket.id
+  key = "style.css"
+  source = "style.css"
+  acl = "public-read"
+  content_type = "text/css"
 }
 
 resource "aws_s3_bucket_website_configuration" "website" {
